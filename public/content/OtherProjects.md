@@ -1,23 +1,15 @@
-## Project 1
-Description
-- Tags: Category 1
+## Startup OneDollarClub
+a platform aimed at creating a positive impact through micro-donations.
+- Tags: Mern
 - Badges:
-  - Badge [blue]
+  - Mern [green]
 - Buttons:
-  - Link [https://example.com]
 
-## Project 2
-Description
-- Tags: Category 2
-- Badges:
-  - Badge [blue]
-- Buttons:
-  - Link [https://example.com]
 
-## Project 3
-Description
-- Tags: Category 3
+## Syndic El Manzah
+Manage unions, enable resident functions securely.
+- Tags: Pern
 - Badges:
-  - Badge [blue]
+  - Pern [purple]
 - Buttons:
-  - Link [https://example.com]
+

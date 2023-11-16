@@ -2,18 +2,20 @@
 - Portable Portfolio
 
 ## Header
-- Hi, my name is Eldora. 
-- I'm a software engineer.
-- Short Description Here.
+- Hi, my name is Mohie. 
+- I'm a Web developer.
+- Crafting seamless web solutions 💻 | Passionate about innovation and clean code | Let's build something amazing together!
 
 ## About
-Write your "About" section here.
+I'm a highly skilled Full Stack JavaScript Developer with a passion for crafting responsive and performant web applications. With 5 years of experience in the field, I bring a deep understanding of both front-end and back-end technologies, along with a proven track record of delivering high-quality projects. 🚀
 
 ## Contact
-Write your "Contact" section here.
-- LinkedIn: https://linkedin.com/in/username
+my email and social media links, offering easy access to reach out and connect.
+- LinkedIn: https://ma.linkedin.com/in/mohieeddinlakhdar
 - GitHub: https://github.com/username
-- Email: username@gmail.com
+- Email: mohieeddinlakhdar@gmail
+- Twitter: https://twitter.com/mohielakhdar
+
 
 ## Logo
-- EB
+- MLACK

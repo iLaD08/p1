@@ -126,7 +126,7 @@ export default function Projects({ color }) {
               })
               .map((other) => (
                 <Fade bottom>
-                  <Card key={other.name}>
+                  <Card key={other.name} h="25vh">
                     <Stack>
                       <CardBody align="left" h={[null, "40vh"]}>
                         <Heading size="sm">{other.name}</Heading>
@@ -146,7 +146,7 @@ export default function Projects({ color }) {
                             </Link>
                           ))}
                         </HStack>
-                        <HStack flexWrap="wrap" pt={4} spacing={2}>
+                        <HStack position="absolute" top="15vh" flexWrap="wrap" pt={4} spacing={2}>
                           {other.badges.map((badge) => (
                             <Badge
                               my={2}
