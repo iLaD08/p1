@@ -23,16 +23,16 @@ import OtherProjectsArray from "./OtherProjectsArray";
 import TagsArray from "./TagsArray";
 
 export default function Projects({ color }) {
-    const projects = ProjectsArray();
-    const others = OtherProjectsArray();
-    const options = TagsArray("ProjectsTags");
-    
-    const [selected, setSelected] = useState("All");
+  const projects = ProjectsArray();
+  const others = OtherProjectsArray();
+  const options = TagsArray("ProjectsTags");
 
-    const handleSelected = (value) => {
-      setSelected(value);
-    };
-    
+  const [selected, setSelected] = useState("All");
+
+  const handleSelected = (value) => {
+    setSelected(value);
+  };
+
   return (
     <>
       <Container maxW={"3xl"} id="projects">
@@ -71,7 +71,12 @@ export default function Projects({ color }) {
 
                       <HStack py={2}>
                         {project.buttons.map((button) => (
-                          <a key={button.text} href={button.href}>
+                          <a
+                            key={button.text}
+                            href={button.href}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <Button color={`${color}.400`}>
                               {button.text}
                             </Button>
@@ -126,7 +131,7 @@ export default function Projects({ color }) {
               })
               .map((other) => (
                 <Fade bottom>
-                  <Card key={other.name} h="25vh">
+                  <Card key={other.name} h="30vh">
                     <Stack>
                       <CardBody align="left" h={[null, "40vh"]}>
                         <Heading size="sm">{other.name}</Heading>
@@ -140,13 +145,14 @@ export default function Projects({ color }) {
                             <Link
                               key={button.text}
                               href={button.href}
+                              target="_blank"
                               color={`${color}.400`}
                             >
                               {button.text}
                             </Link>
                           ))}
                         </HStack>
-                        <HStack position="absolute" top="15vh" flexWrap="wrap" pt={4} spacing={2}>
+                        <HStack flexWrap="wrap" pt={4} spacing={2}>
                           {other.badges.map((badge) => (
                             <Badge
                               my={2}

@@ -13,3 +13,10 @@ Manage unions, enable resident functions securely.
   - Pern [purple]
 - Buttons:
 
+## Digital Hive
+Manage unions, enable resident functions securely.
+- Tags: Landing Page
+- Badges:
+  - Landing page [red]
+- Buttons:
+  - Visit [https://digitalhive.vercel.app/]

@@ -5,12 +5,12 @@ const parseTags = (mdContent) => {
   const lines = mdContent.split("\n");
 
   for (let i = 0; i < lines.length; i++) {
-    const value = lines[i];
-
+    const value = lines[i].replace(/\r/g, "");
     tags.push({
-      value
+      value,
     });
   }
+  console.log(tags);
   return tags;
 };
 
