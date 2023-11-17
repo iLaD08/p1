@@ -9,6 +9,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaTwitter } from "react-icons/fa";
+import { SiUpwork } from "react-icons/si";
 import ProfileArray from "./ProfileArray";
 
 export default function Contact({ color }) {
@@ -18,6 +19,9 @@ export default function Contact({ color }) {
   };
   const github = () => {
     window.open(`${profile.github}`, "_blank", "noreferrer,noopener");
+  };
+  const upwork = () => {
+    window.open(`${profile.upwork}`, "_blank", "noreferrer,noopener");
   };
   const twitter = () => {
     window.open(`${profile.twitter}`, "_blank", "noreferrer,noopener");
@@ -48,15 +52,41 @@ export default function Contact({ color }) {
             <Text color={"gray.600"} fontSize={"xl"} px={4}>
               {profile.contact}
             </Text>
-            <Text color={`${color}.500`} fontWeight={600} fontSize={"lg"} px={4}>
+            <Text
+              color={`${color}.500`}
+              fontWeight={600}
+              fontSize={"lg"}
+              px={4}
+            >
               {profile.email}
             </Text>
             <Center>
               <HStack pt={4} spacing={4}>
-                <FaLinkedin onClick={linkedin} size={28} style={{ cursor: 'pointer' }} />
-                <FaTwitter onClick={twitter} size={28} style={{ cursor: 'pointer' }} />
-                <FaGithub onClick={github} size={28} style={{ cursor: 'pointer' }} />
-                <FaEnvelope onClick={email} size={28} style={{ cursor: 'pointer' }} />
+                <FaLinkedin
+                  onClick={linkedin}
+                  size={28}
+                  style={{ cursor: "pointer" }}
+                />
+                <FaTwitter
+                  onClick={twitter}
+                  size={28}
+                  style={{ cursor: "pointer" }}
+                />
+                <SiUpwork
+                  onClick={upwork}
+                  size={28}
+                  style={{ cursor: "pointer" }}
+                />
+                <FaGithub
+                  onClick={github}
+                  size={28}
+                  style={{ cursor: "pointer" }}
+                />
+                <FaEnvelope
+                  onClick={email}
+                  size={28}
+                  style={{ cursor: "pointer" }}
+                />
               </HStack>
             </Center>
           </Stack>
@@ -65,4 +95,3 @@ export default function Contact({ color }) {
     </>
   );
 }
-
