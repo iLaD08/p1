@@ -14,7 +14,7 @@ Manage unions, enable resident functions securely.
 - Buttons:
 
 ## Digital Hive
-Manage unions, enable resident functions securely.
+A landing page for an agency located in Morocco.
 - Tags: Landing Page
 - Badges:
   - Landing page [red]
