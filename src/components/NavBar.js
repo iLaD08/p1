@@ -12,6 +12,7 @@ import {
   useMediaQuery,
   useDisclosure,
   HStack,
+  DrawerCloseButton,
   Link,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
@@ -22,41 +23,28 @@ const TbIcons = require("react-icons/tb");
 export default function Nav({ color }) {
   const profile = ProfileArray();
   const colors = {
-  "blue": "#3182CE", 
-  "cyan": "#00B5D8", 
-  "gray": "#718096", 
-  "green": "#38A169", 
-  "orange": "#DD6B20", 
-  "pink": "#D53F8C", 
-  "purple": "#805AD5", 
-  "red": "#E53E3E", 
-  "teal": "#319795", 
-  "yellow": "#D69E2E"};
+    blue: "#3182CE",
+    cyan: "#00B5D8",
+    gray: "#718096",
+    green: "#38A169",
+    orange: "#DD6B20",
+    pink: "#D53F8C",
+    purple: "#805AD5",
+    red: "#E53E3E",
+    teal: "#319795",
+    yellow: "#D69E2E",
+  };
   const [scroll, setScroll] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [isLargerThanMD] = useMediaQuery("(min-width: 48em)");
-  const scrollToHero = () => {
-  const heroSection = document.querySelector("#hero");
+  const scrollTo = (to) => {
+    onClose();
+    const heroSection = document.querySelector(`#${to}`);
     heroSection.scrollIntoView({ behavior: "smooth" });
   };
-  const scrollToAbout = () => {
-    const aboutSection = document.querySelector("#about");
-    aboutSection.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToSkills = () => {
-    const skillsSection = document.querySelector("#skills");
-    skillsSection.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToProjects = () => {
-    const projectsSection = document.querySelector("#projects");
-    projectsSection.scrollIntoView({ behavior: "smooth" });
-  };
-  const scrollToContact = () => {
-    const contactSection = document.querySelector("#contact");
-    contactSection.scrollIntoView({ behavior: "smooth" });
-  };
+
   const changeScroll = () =>
     document.body.scrollTop > 80 || document.documentElement.scrollTop > 80
       ? setScroll(true)
@@ -86,28 +74,33 @@ export default function Nav({ color }) {
         justifyContent={"space-between"}
         w="100%"
       >
-        <Link onClick={scrollToHero}>
+        <Link onClick={() => scrollTo("hero")}>
           <HStack>
             {TbLetterComponents.map((Component, index) => (
               <Component key={index} color={colors[color]} />
             ))}
           </HStack>
         </Link>
-
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
             {isLargerThanMD ? (
               <>
-                <Button variant="ghost" onClick={scrollToAbout}>
+                <Button variant="ghost" onClick={() => scrollTo("hero")}>
                   About
                 </Button>
-                <Button variant="ghost" onClick={scrollToSkills}>
+                <Button variant="ghost" onClick={() => scrollTo("skills")}>
                   Skills
                 </Button>
-                <Button variant="ghost" onClick={scrollToProjects}>
+                <Button variant="ghost" onClick={() => scrollTo("projects")}>
                   Projects
                 </Button>
-                <Button variant="ghost" onClick={scrollToContact}>
+                <Button
+                  variant="ghost"
+                  onClick={() => scrollTo("testimonials")}
+                >
+                  Testimonials
+                </Button>
+                <Button variant="ghost" onClick={() => scrollTo("contact")}>
                   Contact
                 </Button>
               </>
@@ -127,22 +120,58 @@ export default function Nav({ color }) {
                   icon={<HamburgerIcon />}
                   onClick={onOpen}
                 ></Button>
-                <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
+                <Drawer
+                  placement="top"
+                  size="full"
+                  onClose={onClose}
+                  isOpen={isOpen}
+                >
                   <DrawerOverlay />
                   <DrawerContent>
+                    <DrawerCloseButton />
                     <DrawerBody>
-                      <Button variant="ghost" onClick={scrollToAbout}>
-                        About
-                      </Button>
-                      <Button variant="ghost" onClick={scrollToSkills}>
-                        Experience
-                      </Button>
-                      <Button variant="ghost" onClick={scrollToProjects}>
-                        Projects
-                      </Button>
-                      <Button variant="ghost" onClick={scrollToContact}>
-                        Contact
-                      </Button>
+                      <Stack h="100%" spacing={4} justify="center">
+                        <Button
+                          size="lg"
+                          fontSize="3xl"
+                          variant="ghost"
+                          onClick={() => scrollTo("hero")}
+                        >
+                          About
+                        </Button>
+                        <Button
+                          size="lg"
+                          fontSize="3xl"
+                          variant="ghost"
+                          onClick={() => scrollTo("skills")}
+                        >
+                          Skills
+                        </Button>
+                        <Button
+                          size="lg"
+                          fontSize="3xl"
+                          variant="ghost"
+                          onClick={() => scrollTo("projects")}
+                        >
+                          Projects
+                        </Button>
+                        <Button
+                          size="lg"
+                          fontSize="3xl"
+                          variant="ghost"
+                          onClick={() => scrollTo("testimonials")}
+                        >
+                          Testimonials
+                        </Button>
+                        <Button
+                          size="lg"
+                          fontSize="3xl"
+                          variant="ghost"
+                          onClick={() => scrollTo("contact")}
+                        >
+                          Contact
+                        </Button>
+                      </Stack>
                     </DrawerBody>
                   </DrawerContent>
                 </Drawer>

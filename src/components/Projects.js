@@ -131,7 +131,7 @@ export default function Projects({ color }) {
               })
               .map((other) => (
                 <Fade bottom>
-                  <Card key={other.name} h="30vh">
+                  <Card key={other.name} h={{ base: "20vh", lg: "30vh" }}>
                     <Stack>
                       <CardBody align="left" h={[null, "40vh"]}>
                         <Heading size="sm">{other.name}</Heading>

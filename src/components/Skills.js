@@ -8,6 +8,7 @@ import {
   Heading,
   Icon,
   Tooltip,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -109,11 +110,10 @@ export default function Skills({ color }) {
             </Stack>
           </Fade>
           <Fade bottom>
-            <Stack
-              direction={{ base: "column", lg: "row" }}
-              justify="center"
-              align="center"
-              spacing={6}
+            <SimpleGrid
+              placeItems="center"
+              columns={{ base: 2, lg: 6 }}
+              spacingY={"4vh"}
             >
               {skills.map(({ title, icon, color }, idx) => (
                 <Tooltip key={idx} hasArrow label={title}>
@@ -127,7 +127,7 @@ export default function Skills({ color }) {
                   </div>
                 </Tooltip>
               ))}
-            </Stack>
+            </SimpleGrid>
           </Fade>
         </Stack>
       </Container>
