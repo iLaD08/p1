@@ -12,13 +12,14 @@ import {
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact, FaGit, FaNodeJs, FaSlack } from "react-icons/fa";
+import { FaReact, FaGit, FaNodeJs } from "react-icons/fa";
 import {
   SiMongodb,
   SiAmazonaws,
   SiSass,
   SiExpress,
   SiAuth0,
+  SiNextdotjs,
 } from "react-icons/si";
 import { BiLogoPostgresql } from "react-icons/bi";
 
@@ -30,9 +31,15 @@ export default function Skills({ color }) {
       color: "yellow",
     },
     {
-      title: "React",
+      title: "ReactJS",
       icon: FaReact,
       color: "cyan",
+    },
+
+    {
+      title: "NextJS",
+      icon: SiNextdotjs,
+      color: "white",
     },
     {
       title: "Sass",
@@ -40,14 +47,14 @@ export default function Skills({ color }) {
       color: "pink",
     },
     {
-      title: "Node.js",
+      title: "NodeJS",
       icon: FaNodeJs,
       color: "lightgreen",
     },
     {
-      title: "Express.js",
+      title: "ExpressJS",
       icon: SiExpress,
-      color: "blue",
+      color: "blue.300",
     },
     {
       title: "MongoDB",
@@ -62,22 +69,17 @@ export default function Skills({ color }) {
     {
       title: "Git",
       icon: FaGit,
-      color: "orange",
+      color: "orange.500",
     },
     {
       title: "AWS",
       icon: SiAmazonaws,
-      color: "orange",
+      color: "yellow.400",
     },
     {
       title: "Auth0",
       icon: SiAuth0,
       color: "white",
-    },
-    {
-      title: "Slack",
-      icon: FaSlack,
-      color: "pink",
     },
   ];
 

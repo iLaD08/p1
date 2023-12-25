@@ -7,7 +7,6 @@ import {
   DrawerContent,
   useColorModeValue,
   Stack,
-  useColorMode,
   IconButton,
   useMediaQuery,
   useDisclosure,
@@ -15,7 +14,7 @@ import {
   DrawerCloseButton,
   Link,
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import ProfileArray from "./ProfileArray";
 const TbIcons = require("react-icons/tb");
@@ -35,7 +34,6 @@ export default function Nav({ color }) {
     yellow: "#D69E2E",
   };
   const [scroll, setScroll] = useState(false);
-  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [isLargerThanMD] = useMediaQuery("(min-width: 48em)");
@@ -83,7 +81,7 @@ export default function Nav({ color }) {
         </Link>
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
-            {isLargerThanMD ? (
+            {isLargerThanMD && (
               <>
                 <Button variant="ghost" onClick={() => scrollTo("hero")}>
                   About
@@ -104,12 +102,7 @@ export default function Nav({ color }) {
                   Contact
                 </Button>
               </>
-            ) : (
-              <></>
             )}
-            <Button onClick={toggleColorMode}>
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
 
             {isLargerThanMD ? (
               <></>
