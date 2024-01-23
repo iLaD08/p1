@@ -3,7 +3,7 @@
 
 ## Header
 - Hi, I am Mohie Eddine. 
-- I am a Web developer.
+- A Web developer.
 - Crafting engaging web applications | Boosting user interaction and business growth | Creating intuitive, user-friendly websites that enhance online visibility.
 
 ## About

@@ -98,11 +98,7 @@ export default function Skills({ color }) {
           </Stack>
           <Fade top>
             <Stack textAlign="center">
-              <Heading
-                size="lg"
-                bgGradient="linear-gradient(90deg,#9f55ff,#7000ff)"
-                bgClip="text"
-              >
+              <Heading size="lg" color={`${color}.400`}>
                 My Skills
               </Heading>
               <Text as="b">
