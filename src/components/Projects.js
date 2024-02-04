@@ -1,3 +1,5 @@
+import { useState } from "react";
+import VideoModal from "./VideoModal";
 import {
   Divider,
   Stack,
@@ -15,9 +17,9 @@ import {
   Badge,
   Link,
   Center,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
-import { useState } from "react";
 import ProjectsArray from "./ProjectsArray";
 import OtherProjectsArray from "./OtherProjectsArray";
 import TagsArray from "./TagsArray";
@@ -27,15 +29,23 @@ export default function Projects({ color }) {
   const others = OtherProjectsArray();
   const options = TagsArray("ProjectsTags");
 
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [selected, setSelected] = useState("All");
+  const [videoURL, setVideoURL] = useState("");
 
   const handleSelected = (value) => {
     setSelected(value);
   };
 
+  const handleOpen = (idx) => {
+    setVideoURL(projects[idx].buttons[0].href);
+    onOpen();
+  };
+
   return (
     <>
       <Container maxW={"3xl"} id="projects">
+        <VideoModal isOpen={isOpen} onClose={onClose} videoURL={videoURL} />
         <Stack
           as={Box}
           textAlign={"center"}
@@ -52,7 +62,7 @@ export default function Projects({ color }) {
             <Divider orientation="horizontal" />
           </Stack>
           <Stack px={4} spacing={4}>
-            {projects.map((project) => (
+            {projects.map((project, idx) => (
               <Fade bottom>
                 <Card
                   key={project.name}
@@ -70,18 +80,28 @@ export default function Projects({ color }) {
                       <Text py={2}>{project.description}</Text>
 
                       <HStack py={2}>
-                        {project.buttons.map((button) => (
-                          <a
-                            key={button.text}
-                            href={button.href}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <Button color={`${color}.400`}>
+                        {project.buttons.map((button) =>
+                          button.text.toLowerCase() === "video" ? (
+                            <Button
+                              key={button.text}
+                              onClick={() => handleOpen(idx)}
+                              color={`${color}.400`}
+                            >
                               {button.text}
                             </Button>
-                          </a>
-                        ))}
+                          ) : (
+                            <a
+                              key={button.text}
+                              href={button.href}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <Button color={`${color}.400`}>
+                                {button.text}
+                              </Button>
+                            </a>
+                          )
+                        )}
                       </HStack>
                       <HStack pt={4} spacing={2}>
                         {project.badges.map((badge) => (

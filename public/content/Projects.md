@@ -18,7 +18,7 @@ A website that utilizes the MERN (MongoDB, Express.js, React, Node.js) stack and
   - Mern [green]
   - Github [black]
 - Buttons:
-  - Video [https://vimeo.com/862453925]
+  - Video [https://player.vimeo.com/video/862453925?h=b7df04f21c]
 
 ## Application with Strava API Integration
 I created a dynamic MERN app integrating the Strava API, highlighting my full-stack expertise, API integration, user authentication skills, and commitment to innovative, user-friendly solutions.

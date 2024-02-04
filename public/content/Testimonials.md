@@ -14,8 +14,7 @@ Turn Figma Design into functional website Front End/Back End
 5
 - Mohie is a pleasure to work with. He can understand what you are looking for within the project and is very patient.
 
-
-
-
-
-
+## Koldo P.
+Subscription Management Platform Development
+5
+- Mohie was hired to address a problem we encountered while building our platform, and he successfully resolved the issue in a short period of time.
