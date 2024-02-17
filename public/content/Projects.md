@@ -7,7 +7,6 @@ I built a website with MERN stack, using GPT-3 and DALL-E APIs to make personali
   - Mern [green]
   - Devops [red]
 - Buttons:
-  - Visit [https://storytalk.ai]
 
 ## Voxhub
 A website that utilizes the MERN (MongoDB, Express.js, React, Node.js) stack and third-party tools like the OpenAI API and Amazon Polly. This comprehensive technology stack enables users to converse with ChatGPT using their own voice and receive responses in custom voices, creating a personalized and engaging conversational experience.
@@ -38,3 +37,13 @@ Turning a designed figma file into a functional website. The figma design provid
   - Figma [purple]
 - Buttons:
   - Visit [https://gafas.vercel.app/]
+  
+## Authenticator Hub
+Authenticator Hub where you can find out how you can enable 2FA for the most popular platforms.
+- ![600x200](../assets/authhub-cover.webp)
+- Tags: Landing Page
+- Badges:
+  - NextJS [black]
+  - SEO [red]
+- Buttons:
+  - Visit [https://authenticatorhub.com/]

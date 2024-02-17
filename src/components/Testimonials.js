@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Divider,
   Stack,
@@ -12,6 +13,7 @@ import {
   Icon,
   HStack,
   Flex,
+  Link,
 } from "@chakra-ui/react";
 import { FaStar, FaStarHalf } from "react-icons/fa";
 import { Fade } from "react-reveal";
@@ -92,6 +94,11 @@ const TestimonialCard = ({ item }) => {
 
 export default function Testimonials({ color }) {
   const testimonials = TestimonialsArray();
+  const [showCount, setShowCount] = useState(5);
+
+  const handleShowMore = () => {
+    setShowCount(showCount + 5);
+  };
 
   return (
     <>
@@ -107,11 +114,20 @@ export default function Testimonials({ color }) {
             <Divider orientation="horizontal" />
           </Stack>
           <Stack spacing={"5vh"}>
-            {testimonials?.map((item) => (
+            {testimonials?.slice(0, showCount)?.map((item) => (
               <Fade bottom>
                 <TestimonialCard item={item} />
               </Fade>
             ))}
+            {showCount < testimonials.length && (
+              <Link
+                onClick={handleShowMore}
+                textAlign="center"
+                color={`${color}.300`}
+              >
+                Show more...
+              </Link>
+            )}{" "}
           </Stack>
         </Stack>
       </Container>
