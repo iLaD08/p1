@@ -28,3 +28,8 @@ Next.JS Developer for Editing Website - authenticatorhub.com
 JavaScript code for a Hubspot form
 5
 - Exceptionally fast and reliable service! I highly recommend Mohie to others.
+
+## Akeel 
+Art by Yustina
+5
+- Mohie worked in a timely fashion, always listened to the requirements and made changes accountably no matter how long it took him. I look forward to working with him again soon. Highly recommended Full Stack Developer (MERN)

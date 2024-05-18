@@ -12,16 +12,9 @@ import {
 } from "@chakra-ui/react";
 import { Fade } from "react-reveal";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact, FaGit, FaNodeJs } from "react-icons/fa";
-import {
-  SiMongodb,
-  SiAmazonaws,
-  SiSass,
-  SiExpress,
-  SiAuth0,
-  SiNextdotjs,
-} from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { FaReact, FaNodeJs, FaGit, FaStripe } from 'react-icons/fa';
+import { SiNextdotjs, SiSass, SiExpress, SiMongodb, SiAmazonaws, SiSupabase, SiTailwindcss, SiFirebase } from 'react-icons/si';
+import { BiLogoPostgresql } from 'react-icons/bi';
 
 export default function Skills({ color }) {
   const skills = [
@@ -35,16 +28,10 @@ export default function Skills({ color }) {
       icon: FaReact,
       color: "cyan",
     },
-
     {
       title: "NextJS",
       icon: SiNextdotjs,
       color: "white",
-    },
-    {
-      title: "Sass",
-      icon: SiSass,
-      color: "pink",
     },
     {
       title: "NodeJS",
@@ -67,22 +54,41 @@ export default function Skills({ color }) {
       color: "lightblue",
     },
     {
+      title: "Supabase",
+      icon: SiSupabase,
+      color: "green.300",
+    },
+    {
+      title: "Firebase",
+      icon: SiFirebase,
+      color: "orange",
+    },
+    {
+      title: "Stripe",
+      icon: FaStripe,
+      color: "purple.400",
+    },
+    {
+      title: "TailwindCSS",
+      icon: SiTailwindcss,
+      color: "teal.300",
+    },
+    {
+      title: "Sass",
+      icon: SiSass,
+      color: "pink",
+    },
+    {
       title: "Git",
       icon: FaGit,
-      color: "orange.500",
+      color: "orange.400",
     },
     {
       title: "AWS",
       icon: SiAmazonaws,
       color: "yellow.400",
     },
-    {
-      title: "Auth0",
-      icon: SiAuth0,
-      color: "white",
-    },
   ];
-
   return (
     <>
       <Container maxW={"3xl"} id="skills">
