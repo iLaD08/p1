@@ -1,6 +1,6 @@
 ## Cashful
 Providing the complete infrastructure and tools required to enable businesses to embed, launch and distribute financial products to a new market of customers.
-- ![600x200](../assets/storyTalk-cover.webp)
+- ![600x200](../assets/cashful.webp)
 - Tags: NextJS
 - Badges:
   - NextJS [black]
@@ -20,7 +20,7 @@ I built a website with MERN stack, using GPT-3 and DALL-E APIs to make personali
 
 ## Art by Yustina
 Converting a design from Figma to a functional website using advanced technologies to create a e-commerce platform.
-- ![600x200](../assets/storyTalk-cover.webp)
+- ![600x200](../assets/artBYustina.webp)
 - Tags: AI
 - Badges:
   - NextJS [black]
